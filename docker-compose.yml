@@ -1,7 +1,13 @@
 version: "3.3"
 services:
   red_handy:
+    container_name: red_handy
     build:
       context: ./
       dockerfile: Dockerfile
+    environment:
+      - "DISPLAY=$DISPLAY"
+      - "QT_X11_NO_MITSHM=1"
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
     tty: true
