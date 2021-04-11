@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="mode" default="default"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="-5"/>
+  <arg name="namespace" default="rexrov"/>
+
+  <include file="$(find uuv_descriptions)/launch/upload_rexrov.launch">
+    <arg name="mode" value="$(arg mode)"/>
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="z" value="$(arg z)"/>
+    <arg name="namespace" value="$(arg namespace)"/>
+  </include>
+</launch>
