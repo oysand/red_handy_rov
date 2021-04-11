@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="world_name" default="ocean_waves"/>
+
+  <include file="$(find simulation)/launch/world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+  </include>
+  <include file="$(find simulation)/launch/rov.launch"/>
+</launch>
